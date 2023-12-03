@@ -1,0 +1,61 @@
+.book-detail-link {
+  margin: 0.3em 0;
+  padding: 0;
+}
+
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.books-list {
+  margin-top: 1rem;
+}
+
+.book-cards {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.book-card {
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-basis: 300px;
+  flex-direction: column;
+  gap: 0.3em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.book-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.book-info {
+  margin: 8px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.details-button {
+  margin: 1rem 0;
+  cursor: pointer;
+  background-color: #fdb870;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1a202c;
+  transition: background-color 0.3s ease-in-out;
+}

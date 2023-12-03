@@ -1,15 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import Admin from "./pages/Admin/Admin";
+import Books from "./pages/Books/Books";
+import AddBook from "./pages/AddBook/AddBook";
+import BookDetails from "./components/BookDetails/BookDetails";
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-      </Switch>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/Books" element={<Books />} />
+        <Route path="/add" element={<AddBook />} />
+        <Route path="/book/:isbn" element={<BookDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
