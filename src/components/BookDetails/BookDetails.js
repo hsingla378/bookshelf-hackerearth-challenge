@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import { bookListMain } from "../../booksListMain";
 import QRCode from "react-qr-code";
 import "./BookDetails.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const BookDetails = () => {
   const routeParams = useParams();
@@ -43,18 +46,24 @@ const BookDetails = () => {
     <div>
       <Header />
       <div className="book-details-container">
-        <h2>{book.name} Details</h2>
-        <p>ISBN: {book.isbn}</p>
-        <p>Category: {book.category}</p>
-        <p>Row Number: {book.row}</p>
-        <p>Book Count: {book.count}</p>
-        <p>Cost: {book.cost}</p>
-        <p>Availability: {book.available ? "Available" : "Not Available"}</p>
+        <div className="book-details">
+          <h2>{book.name} Details</h2>
+          <p>ISBN: {book.isbn}</p>
+          <p>Category: {book.category}</p>
+          <p>Row Number: {book.row}</p>
+          <p>Book Count: {book.count}</p>
+          <p>Cost: {book.cost}</p>
+          <p>Availability: {book.available ? "Available" : "Not Available"}</p>
+        </div>
 
-        {/* Generated QR Code */}
-        <div className="generated-qr-code">
-          <QRCode size={256} value={window.location.href} ref={qrCodeRef} />
-          <button onClick={downloadQRCode}>Download QR Code</button>
+        <div className="qr-code-section">
+          <div className="generated-qr-code">
+            <QRCode size={256} value={window.location.href} ref={qrCodeRef} />
+          </div>
+
+          <button onClick={downloadQRCode} className="download-qr-btn">
+            Download QR Code
+          </button>
         </div>
       </div>
     </div>

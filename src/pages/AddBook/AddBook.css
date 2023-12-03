@@ -66,8 +66,8 @@
 }
 
 .add-book-form button[type="button"] {
-  background-color: #888;
-  color: white;
+  background-color: #fdb870;
+  color: #1a202c;
   margin-left: 1rem;
 }
 
@@ -78,4 +78,23 @@
 
 .add-book-form input[type="checkbox"] {
   margin-top: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .add-book-form {
+    width: 90%;
+  }
+
+  .add-book-form form {
+    padding: 1rem;
+  }
+
+  .add-book-form button {
+    margin-top: 1rem;
+  }
+}
+
+.add-book-form input {
+  width: 100%;
+  box-sizing: border-box;
 }
