@@ -58,7 +58,12 @@ const BookDetails = () => {
 
         <div className="qr-code-section">
           <div className="generated-qr-code">
-            <QRCode size={256} value={window.location.href} ref={qrCodeRef} />
+            <QRCode
+              size={256}
+              value={window.location.href}
+              ref={qrCodeRef}
+              style={{ backgroundColor: "white", padding: "1rem" }}
+            />
           </div>
 
           <button onClick={downloadQRCode} className="download-qr-btn">
